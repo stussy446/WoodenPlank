@@ -465,6 +465,7 @@ GameObject:
   - component: {fileID: 499914755}
   - component: {fileID: 499914754}
   - component: {fileID: 499914753}
+  - component: {fileID: 499914757}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -551,6 +552,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &499914757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 499914752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 784488f1096101945b833b22b852e54c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _shakeTime: 2
+  _shakeSpeed: 1
+  _shakeAmount: 1
 --- !u!1 &613917810
 GameObject:
   m_ObjectHideFlags: 0
@@ -563,6 +579,7 @@ GameObject:
   - component: {fileID: 613917813}
   - component: {fileID: 613917812}
   - component: {fileID: 613917811}
+  - component: {fileID: 613917815}
   m_Layer: 0
   m_Name: Vertical Cube
   m_TagString: Untagged
@@ -648,6 +665,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &613917815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 613917810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 784488f1096101945b833b22b852e54c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _shakeTime: 2
+  _shakeSpeed: 1
+  _shakeAmount: 1
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -709,6 +741,7 @@ GameObject:
   - component: {fileID: 2134143224}
   - component: {fileID: 2134143223}
   - component: {fileID: 2134143222}
+  - component: {fileID: 2134143226}
   m_Layer: 0
   m_Name: Horizontal Cube
   m_TagString: Untagged
@@ -794,6 +827,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!114 &2134143226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2134143221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 784488f1096101945b833b22b852e54c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _shakeTime: 2
+  _shakeSpeed: 1
+  _shakeAmount: 1
 --- !u!1 &2138630044
 GameObject:
   m_ObjectHideFlags: 0

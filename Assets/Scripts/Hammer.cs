@@ -9,20 +9,20 @@ public class Hammer : MonoBehaviour
     {
         _plankPosition = collision.transform.position;
         _plankPosition.y += 0.5f;
-
         _plankScale = collision.transform.localScale;
 
-        Debug.Log($"plankposition is {_plankPosition} and plankscale is {_plankScale}");
-
+        // create overlapbox just above the wooden plank, across the entirety of the plank
         Collider[] hitColliders = Physics.OverlapBox(_plankPosition, collision.transform.localScale / 2, Quaternion.identity);
 
         int i = 0;
-
         while (i < hitColliders.Length)
         {
-            Debug.Log("Hit : " + hitColliders[i].name + i);
-            
-            // TODO: call Shake method on each object found and only procecss object if it has shake script on it
+            Shaker hitObjectShaker = hitColliders[i].GetComponent<Shaker>();
+
+            if (hitObjectShaker != null)
+            {
+                hitObjectShaker.StartShaking();
+            }
 
             i++;
         }
