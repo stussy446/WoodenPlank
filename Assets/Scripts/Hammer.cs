@@ -14,6 +14,15 @@ public class Hammer : MonoBehaviour
         // create overlapbox just above the wooden plank, across the entirety of the plank
         Collider[] hitColliders = Physics.OverlapBox(_plankPosition, collision.transform.localScale / 2, Quaternion.identity);
 
+        ShakeHitObjects(hitColliders);
+    }
+
+    /// <summary>
+    /// Goes through all the colliders detected by the OverlapBox and calls on them to start shaking
+    /// </summary>
+    /// <param name="hitColliders">Collider[]</param>
+    private void ShakeHitObjects(Collider[] hitColliders)
+    {
         int i = 0;
         while (i < hitColliders.Length)
         {
@@ -26,15 +35,6 @@ public class Hammer : MonoBehaviour
 
             i++;
         }
-    }
 
-    //Draw the Box Overlap as a gizmo to show where it currently is testing. Click the Gizmos button to see this
-    void OnDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-        //Check that it is being run in Play Mode, so it doesn't try to draw this in Editor mode
-     
-        //Draw a cube where the OverlapBox is (positioned where your GameObject is as well as a size)
-         Gizmos.DrawWireCube(_plankPosition, _plankScale);
     }
 }

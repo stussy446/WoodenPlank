@@ -565,8 +565,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _shakeTime: 2
-  _shakeSpeed: 1
-  _shakeAmount: 1
+  _shakeSpeed: 5
+  _shakeAmount: 5
 --- !u!1 &613917810
 GameObject:
   m_ObjectHideFlags: 0
@@ -678,8 +678,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _shakeTime: 2
-  _shakeSpeed: 1
-  _shakeAmount: 1
+  _shakeSpeed: 5
+  _shakeAmount: 5
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -840,8 +840,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _shakeTime: 2
-  _shakeSpeed: 1
-  _shakeAmount: 1
+  _shakeSpeed: 5
+  _shakeAmount: 5
 --- !u!1 &2138630044
 GameObject:
   m_ObjectHideFlags: 0

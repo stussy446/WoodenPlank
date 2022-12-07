@@ -1,31 +1,50 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Shaker : MonoBehaviour
 {
     [Header("Shake Settings")]
     [SerializeField] private float _shakeTime = 2f;
-    [SerializeField] private float _shakeSpeed = 1f;
-    [SerializeField] private float _shakeAmount = 1f;
+    [SerializeField] private float _shakeAmount = 0.01f;
 
+    private bool _isShaking = false;
 
+    private void Update()
+    {
+        if (_isShaking)
+        {
+            float xPos = Random.Range(transform.position.x + _shakeAmount, transform.position.x - _shakeAmount);
+            Vector3 newPos = new Vector3(xPos, transform.position.y, transform.position.z);
+
+            transform.position = newPos;
+        }
+    }
+
+    /// <summary>
+    /// Calls Shake IEnumerator to allow shaking to occur on the gameobject
+    /// </summary>
     public void StartShaking()
     {
-        Debug.Log($"{gameObject.name} is going to shake now!");
         StartCoroutine(Shake());
     }
 
+    /// <summary>
+    /// Sets _isShaking to true and yields for _shakeTime seconds, allowing the object to shake for that amount of time before the object returns to its original position
+    /// </summary>
+    /// <returns></returns>
     private IEnumerator Shake()
     {
-        float timer = _shakeTime;
+        Vector3 originalPos = transform.position;
 
-        while (timer > 0)
+        if (!_isShaking)
         {
-            timer -= Time.deltaTime;
+            _isShaking = true;
         }
-        
-        yield return null; 
+
+        yield return new WaitForSeconds(_shakeTime);
+
+        _isShaking = false;
+        transform.position = originalPos;
     }
 }
